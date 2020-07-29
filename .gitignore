@@ -2,8 +2,8 @@
 *
 
 # But not these files...
-!.gitignore
-!*/*/postProcessing/*
+# !.gitignore
+# !*/
 #comentario1
 
 # comentairo2
