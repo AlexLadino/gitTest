@@ -3,9 +3,10 @@
 pitzDailyPimpleFoam/*
 !pitzDailyPimpleFoam/postProcessing/
 
-pitzDailyPimpleFoam/0/
-pitzDailyPimpleFoam/constant/
-pitzDailyPimpleFoam/system/
+# prueba de que no se requeire entrada de comentario de commit
+!pitzDailyPimpleFoam/0/
+!pitzDailyPimpleFoam/constant/
+!pitzDailyPimpleFoam/system/
 
 pitzDailyMappedPisoFoam/*
 !pitzDailyMappedPisoFoam/postProcessing/
