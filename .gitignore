@@ -3,11 +3,9 @@
 
 # But not these files...
 !.gitignore
-
+!*./postProcessing
 #comentario1
 
 # comentairo2
 
 # cometnario 3
-
-# cometnario 4
