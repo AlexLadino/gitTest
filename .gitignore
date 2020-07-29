@@ -1,9 +1,22 @@
-# Ignore everything
 
 #!pitzDailyPimpleFoam/
 pitzDailyPimpleFoam/*
 !pitzDailyPimpleFoam/postProcessing/
 
+!pitzDailyPimpleFoam/0/
+!pitzDailyPimpleFoam/constant/
+!pitzDailyPimpleFoam/system/
+
 pitzDailyMappedPisoFoam/*
 !pitzDailyMappedPisoFoam/postProcessing/
 
+
+
+m1/*
+!m1/postProcessing/
+
+m2/*
+!m2/postProcessing/
+
+m3/*
+!m3/postProcessing/

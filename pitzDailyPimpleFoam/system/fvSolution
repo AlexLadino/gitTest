@@ -1,0 +1,100 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.x                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    p
+    {
+        solver           GAMG;
+        tolerance        1e-04;
+        relTol           0.1;//0.05;
+
+        smoother         DICGaussSeidel;
+
+        //cacheAgglomeration true;
+        //nCellsInCoarsestLevel 100;
+        //agglomerator     faceAreaPair;
+        //mergeLevels      1;
+    }
+
+    pFinal
+    {
+        $p;
+        tolerance        1e-5;
+        relTol           0;
+    }
+
+    "(U|k|epsilon)"
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-5;
+        relTol          0.1;
+    }
+
+    "(U|k|epsilon)Final"
+    {
+        $U;
+        tolerance       5e-08; // 5e-6;
+        relTol          0;
+    }
+}
+
+PIMPLE
+{
+   
+      nCorrectors     		   2; // correcting phi (flow)
+      nOuterCorrectors 		   3; // correcting external - PIMPLE
+      nNonOrthogonalCorrectors 1; // correcting p (pressure)
+      consistent	yes;
+    
+    //residualControl
+    //{
+    //    U
+    //    {
+    //            tolerance  1e-5;
+    //            relTol      0;
+    //    }
+    //    p
+    //    {
+    //            tolerance  5e-4;
+    //            relTol      0;
+    //    }
+    // }
+}
+
+relaxationFactors
+{
+//    fields
+//    {
+//        p      0.3;
+//        pFinal   1;
+//    }
+//    equations
+//    {
+//        "U|k|epsilon"     0.3;
+//        "(U|k|epsilon)Final"   1;
+//    }
+    
+//    equations
+//    {
+//        ".*"            1;
+//    }
+}
+
+
+// ************************************************************************* //
