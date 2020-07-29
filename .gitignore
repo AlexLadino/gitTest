@@ -1,11 +1,9 @@
 # Ignore everything
-*
+
 #!pitzDailyPimpleFoam/
-pitzDailyMappedPisoFoam
 pitzDailyPimpleFoam/*
 !pitzDailyPimpleFoam/postProcessing/
-#comentario1
 
-# comentairo2
+pitzDailyMappedPisoFoam/*
+!pitzDailyMappedPisoFoam/postProcessing/
 
-# cometnario 3
