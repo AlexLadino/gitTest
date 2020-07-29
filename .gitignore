@@ -3,9 +3,9 @@
 pitzDailyPimpleFoam/*
 !pitzDailyPimpleFoam/postProcessing/
 
-!pitzDailyPimpleFoam/0/
-!pitzDailyPimpleFoam/constant/
-!pitzDailyPimpleFoam/system/
+pitzDailyPimpleFoam/0/
+pitzDailyPimpleFoam/constant/
+pitzDailyPimpleFoam/system/
 
 pitzDailyMappedPisoFoam/*
 !pitzDailyMappedPisoFoam/postProcessing/
