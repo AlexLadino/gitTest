@@ -1,9 +1,9 @@
 # Ignore everything
 *
-
-# But not these files...
-# !.gitignore
-# !*/
+#!pitzDailyPimpleFoam/
+pitzDailyMappedPisoFoam
+pitzDailyPimpleFoam/*
+!pitzDailyPimpleFoam/postProcessing/
 #comentario1
 
 # comentairo2
